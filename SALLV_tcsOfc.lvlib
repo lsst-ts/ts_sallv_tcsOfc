@@ -13,11 +13,13 @@
 		<Item Name="command_enable.ctl" Type="VI" URL="../DataTypes/command_enable.ctl"/>
 		<Item Name="command_enterControl.ctl" Type="VI" URL="../DataTypes/command_enterControl.ctl"/>
 		<Item Name="command_exitControl.ctl" Type="VI" URL="../DataTypes/command_exitControl.ctl"/>
+		<Item Name="command_readShwfsFile.ctl" Type="VI" URL="../DataTypes/command_readShwfsFile.ctl"/>
+		<Item Name="command_readWfsFile.ctl" Type="VI" URL="../DataTypes/command_readWfsFile.ctl"/>
 		<Item Name="command_standby.ctl" Type="VI" URL="../DataTypes/command_standby.ctl"/>
 		<Item Name="command_start.ctl" Type="VI" URL="../DataTypes/command_start.ctl"/>
-		<Item Name="degreeOfFreedom.ctl" Type="VI" URL="../DataTypes/degreeOfFreedom.ctl"/>
 		<Item Name="logevent.ctl" Type="VI" URL="../DataTypes/logevent.ctl"/>
 		<Item Name="logevent_appliedSettingsMatchStart.ctl" Type="VI" URL="../DataTypes/logevent_appliedSettingsMatchStart.ctl"/>
+		<Item Name="logevent_degreeOfFreedom.ctl" Type="VI" URL="../DataTypes/logevent_degreeOfFreedom.ctl"/>
 		<Item Name="logevent_detailedState.ctl" Type="VI" URL="../DataTypes/logevent_detailedState.ctl"/>
 		<Item Name="logevent_errorCode.ctl" Type="VI" URL="../DataTypes/logevent_errorCode.ctl"/>
 		<Item Name="logevent_heartbeat.ctl" Type="VI" URL="../DataTypes/logevent_heartbeat.ctl"/>
@@ -30,9 +32,6 @@
 		<Item Name="loopTimeMs.ctl" Type="VI" URL="../DataTypes/loopTimeMs.ctl"/>
 		<Item Name="timestamp.ctl" Type="VI" URL="../DataTypes/timestamp.ctl"/>
 	</Item>
-	<Item Name="subvi" Type="Folder">
-		<Item Name="ErrorConverter(ErrCodeorStatus).vi" Type="VI" URL="../subvi/ErrorConverter(ErrCodeorStatus).vi"/>
-	</Item>
 	<Item Name="SALLV_tcsOfc.so" Type="Document" URL="../SALLV_tcsOfc.so"/>
 	<Item Name="tcsOfc_Connect.vi" Type="VI" URL="../VIs/tcsOfc_Connect.vi"/>
 	<Item Name="tcsOfc_Release.vi" Type="VI" URL="../VIs/tcsOfc_Release.vi"/>
@@ -40,12 +39,16 @@
 	<Item Name="tcsOfc_acceptCommand_enable.vi" Type="VI" URL="../VIs/tcsOfc_acceptCommand_enable.vi"/>
 	<Item Name="tcsOfc_acceptCommand_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_acceptCommand_enterControl.vi"/>
 	<Item Name="tcsOfc_acceptCommand_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_acceptCommand_exitControl.vi"/>
+	<Item Name="tcsOfc_acceptCommand_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_acceptCommand_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_acceptCommand_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_acceptCommand_readWfsFile.vi"/>
 	<Item Name="tcsOfc_acceptCommand_standby.vi" Type="VI" URL="../VIs/tcsOfc_acceptCommand_standby.vi"/>
 	<Item Name="tcsOfc_acceptCommand_start.vi" Type="VI" URL="../VIs/tcsOfc_acceptCommand_start.vi"/>
 	<Item Name="tcsOfc_ackCommand_disable.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_disable.vi"/>
 	<Item Name="tcsOfc_ackCommand_enable.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_enable.vi"/>
 	<Item Name="tcsOfc_ackCommand_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_enterControl.vi"/>
 	<Item Name="tcsOfc_ackCommand_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_exitControl.vi"/>
+	<Item Name="tcsOfc_ackCommand_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_ackCommand_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_readWfsFile.vi"/>
 	<Item Name="tcsOfc_ackCommand_standby.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_standby.vi"/>
 	<Item Name="tcsOfc_ackCommand_start.vi" Type="VI" URL="../VIs/tcsOfc_ackCommand_start.vi"/>
 	<Item Name="tcsOfc_cancelCallback_ackcmd.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_ackcmd.vi"/>
@@ -58,13 +61,17 @@
 	<Item Name="tcsOfc_cancelCallback_command_enterControlackcmd.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_enterControlackcmd.vi"/>
 	<Item Name="tcsOfc_cancelCallback_command_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_exitControl.vi"/>
 	<Item Name="tcsOfc_cancelCallback_command_exitControlackcmd.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_exitControlackcmd.vi"/>
+	<Item Name="tcsOfc_cancelCallback_command_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_cancelCallback_command_readShwfsFileackcmd.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_readShwfsFileackcmd.vi"/>
+	<Item Name="tcsOfc_cancelCallback_command_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_readWfsFile.vi"/>
+	<Item Name="tcsOfc_cancelCallback_command_readWfsFileackcmd.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_readWfsFileackcmd.vi"/>
 	<Item Name="tcsOfc_cancelCallback_command_standby.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_standby.vi"/>
 	<Item Name="tcsOfc_cancelCallback_command_standbyackcmd.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_standbyackcmd.vi"/>
 	<Item Name="tcsOfc_cancelCallback_command_start.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_start.vi"/>
 	<Item Name="tcsOfc_cancelCallback_command_startackcmd.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_command_startackcmd.vi"/>
-	<Item Name="tcsOfc_cancelCallback_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_cancelCallback_logEvent_.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_logEvent_.vi"/>
 	<Item Name="tcsOfc_cancelCallback_logEvent_appliedSettingsMatchStart.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_logEvent_appliedSettingsMatchStart.vi"/>
+	<Item Name="tcsOfc_cancelCallback_logEvent_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_logEvent_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_cancelCallback_logEvent_detailedState.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_logEvent_detailedState.vi"/>
 	<Item Name="tcsOfc_cancelCallback_logEvent_errorCode.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_logEvent_errorCode.vi"/>
 	<Item Name="tcsOfc_cancelCallback_logEvent_heartbeat.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_logEvent_heartbeat.vi"/>
@@ -78,6 +85,7 @@
 	<Item Name="tcsOfc_cancelCallback_timestamp.vi" Type="VI" URL="../VIs/tcsOfc_cancelCallback_timestamp.vi"/>
 	<Item Name="tcsOfc_checkCallbacks.vi" Type="VI" URL="../VIs/tcsOfc_checkCallbacks.vi"/>
 	<Item Name="tcsOfc_flushSamplesEvent_appliedSettingsMatchStart.vi" Type="VI" URL="../VIs/tcsOfc_flushSamplesEvent_appliedSettingsMatchStart.vi"/>
+	<Item Name="tcsOfc_flushSamplesEvent_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_flushSamplesEvent_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_flushSamplesEvent_detailedState.vi" Type="VI" URL="../VIs/tcsOfc_flushSamplesEvent_detailedState.vi"/>
 	<Item Name="tcsOfc_flushSamplesEvent_errorCode.vi" Type="VI" URL="../VIs/tcsOfc_flushSamplesEvent_errorCode.vi"/>
 	<Item Name="tcsOfc_flushSamplesEvent_heartbeat.vi" Type="VI" URL="../VIs/tcsOfc_flushSamplesEvent_heartbeat.vi"/>
@@ -89,6 +97,7 @@
 	<Item Name="tcsOfc_flushSamplesEvent_summaryState.vi" Type="VI" URL="../VIs/tcsOfc_flushSamplesEvent_summaryState.vi"/>
 	<Item Name="tcsOfc_getCurrentTime.vi" Type="VI" URL="../VIs/tcsOfc_getCurrentTime.vi"/>
 	<Item Name="tcsOfc_getEvent_appliedSettingsMatchStart.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_appliedSettingsMatchStart.vi"/>
+	<Item Name="tcsOfc_getEvent_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_getEvent_detailedState.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_detailedState.vi"/>
 	<Item Name="tcsOfc_getEvent_errorCode.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_errorCode.vi"/>
 	<Item Name="tcsOfc_getEvent_heartbeat.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_heartbeat.vi"/>
@@ -98,25 +107,28 @@
 	<Item Name="tcsOfc_getEvent_rejectedCommand.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_rejectedCommand.vi"/>
 	<Item Name="tcsOfc_getEvent_settingVersions.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_settingVersions.vi"/>
 	<Item Name="tcsOfc_getEvent_summaryState.vi" Type="VI" URL="../VIs/tcsOfc_getEvent_summaryState.vi"/>
-	<Item Name="tcsOfc_getNextSample_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_getNextSample_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_getNextSample_loopTimeMs.vi" Type="VI" URL="../VIs/tcsOfc_getNextSample_loopTimeMs.vi"/>
 	<Item Name="tcsOfc_getNextSample_timestamp.vi" Type="VI" URL="../VIs/tcsOfc_getNextSample_timestamp.vi"/>
 	<Item Name="tcsOfc_getResponse_disable.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_disable.vi"/>
 	<Item Name="tcsOfc_getResponse_enable.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_enable.vi"/>
 	<Item Name="tcsOfc_getResponse_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_enterControl.vi"/>
 	<Item Name="tcsOfc_getResponse_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_exitControl.vi"/>
+	<Item Name="tcsOfc_getResponse_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_getResponse_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_readWfsFile.vi"/>
 	<Item Name="tcsOfc_getResponse_standby.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_standby.vi"/>
 	<Item Name="tcsOfc_getResponse_start.vi" Type="VI" URL="../VIs/tcsOfc_getResponse_start.vi"/>
-	<Item Name="tcsOfc_getSample_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_getSample_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_getSample_loopTimeMs.vi" Type="VI" URL="../VIs/tcsOfc_getSample_loopTimeMs.vi"/>
 	<Item Name="tcsOfc_getSample_timestamp.vi" Type="VI" URL="../VIs/tcsOfc_getSample_timestamp.vi"/>
 	<Item Name="tcsOfc_issueCommand_disable.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_disable.vi"/>
 	<Item Name="tcsOfc_issueCommand_enable.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_enable.vi"/>
 	<Item Name="tcsOfc_issueCommand_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_enterControl.vi"/>
 	<Item Name="tcsOfc_issueCommand_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_exitControl.vi"/>
+	<Item Name="tcsOfc_issueCommand_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_issueCommand_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_readWfsFile.vi"/>
 	<Item Name="tcsOfc_issueCommand_standby.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_standby.vi"/>
 	<Item Name="tcsOfc_issueCommand_start.vi" Type="VI" URL="../VIs/tcsOfc_issueCommand_start.vi"/>
 	<Item Name="tcsOfc_logEvent_appliedSettingsMatchStart.vi" Type="VI" URL="../VIs/tcsOfc_logEvent_appliedSettingsMatchStart.vi"/>
+	<Item Name="tcsOfc_logEvent_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_logEvent_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_logEvent_detailedState.vi" Type="VI" URL="../VIs/tcsOfc_logEvent_detailedState.vi"/>
 	<Item Name="tcsOfc_logEvent_errorCode.vi" Type="VI" URL="../VIs/tcsOfc_logEvent_errorCode.vi"/>
 	<Item Name="tcsOfc_logEvent_heartbeat.vi" Type="VI" URL="../VIs/tcsOfc_logEvent_heartbeat.vi"/>
@@ -130,9 +142,10 @@
 	<Item Name="tcsOfc_monitorCommand_enable.vi" Type="VI" URL="../VIs/tcsOfc_monitorCommand_enable.vi"/>
 	<Item Name="tcsOfc_monitorCommand_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_monitorCommand_enterControl.vi"/>
 	<Item Name="tcsOfc_monitorCommand_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_monitorCommand_exitControl.vi"/>
+	<Item Name="tcsOfc_monitorCommand_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_monitorCommand_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_monitorCommand_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_monitorCommand_readWfsFile.vi"/>
 	<Item Name="tcsOfc_monitorCommand_standby.vi" Type="VI" URL="../VIs/tcsOfc_monitorCommand_standby.vi"/>
 	<Item Name="tcsOfc_monitorCommand_start.vi" Type="VI" URL="../VIs/tcsOfc_monitorCommand_start.vi"/>
-	<Item Name="tcsOfc_putSample_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_putSample_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_putSample_loopTimeMs.vi" Type="VI" URL="../VIs/tcsOfc_putSample_loopTimeMs.vi"/>
 	<Item Name="tcsOfc_putSample_timestamp.vi" Type="VI" URL="../VIs/tcsOfc_putSample_timestamp.vi"/>
 	<Item Name="tcsOfc_registerCallback_ackcmd.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_ackcmd.vi"/>
@@ -145,13 +158,17 @@
 	<Item Name="tcsOfc_registerCallback_command_enterControlackcmd.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_enterControlackcmd.vi"/>
 	<Item Name="tcsOfc_registerCallback_command_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_exitControl.vi"/>
 	<Item Name="tcsOfc_registerCallback_command_exitControlackcmd.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_exitControlackcmd.vi"/>
+	<Item Name="tcsOfc_registerCallback_command_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_registerCallback_command_readShwfsFileackcmd.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_readShwfsFileackcmd.vi"/>
+	<Item Name="tcsOfc_registerCallback_command_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_readWfsFile.vi"/>
+	<Item Name="tcsOfc_registerCallback_command_readWfsFileackcmd.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_readWfsFileackcmd.vi"/>
 	<Item Name="tcsOfc_registerCallback_command_standby.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_standby.vi"/>
 	<Item Name="tcsOfc_registerCallback_command_standbyackcmd.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_standbyackcmd.vi"/>
 	<Item Name="tcsOfc_registerCallback_command_start.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_start.vi"/>
 	<Item Name="tcsOfc_registerCallback_command_startackcmd.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_command_startackcmd.vi"/>
-	<Item Name="tcsOfc_registerCallback_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_registerCallback_logEvent_.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_logEvent_.vi"/>
 	<Item Name="tcsOfc_registerCallback_logEvent_appliedSettingsMatchStart.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_logEvent_appliedSettingsMatchStart.vi"/>
+	<Item Name="tcsOfc_registerCallback_logEvent_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_logEvent_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_registerCallback_logEvent_detailedState.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_logEvent_detailedState.vi"/>
 	<Item Name="tcsOfc_registerCallback_logEvent_errorCode.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_logEvent_errorCode.vi"/>
 	<Item Name="tcsOfc_registerCallback_logEvent_heartbeat.vi" Type="VI" URL="../VIs/tcsOfc_registerCallback_logEvent_heartbeat.vi"/>
@@ -167,9 +184,12 @@
 	<Item Name="tcsOfc_salCommander_enable.vi" Type="VI" URL="../VIs/tcsOfc_salCommander_enable.vi"/>
 	<Item Name="tcsOfc_salCommander_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_salCommander_enterControl.vi"/>
 	<Item Name="tcsOfc_salCommander_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_salCommander_exitControl.vi"/>
+	<Item Name="tcsOfc_salCommander_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_salCommander_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_salCommander_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_salCommander_readWfsFile.vi"/>
 	<Item Name="tcsOfc_salCommander_standby.vi" Type="VI" URL="../VIs/tcsOfc_salCommander_standby.vi"/>
 	<Item Name="tcsOfc_salCommander_start.vi" Type="VI" URL="../VIs/tcsOfc_salCommander_start.vi"/>
 	<Item Name="tcsOfc_salEvent_appliedSettingsMatchStart.vi" Type="VI" URL="../VIs/tcsOfc_salEvent_appliedSettingsMatchStart.vi"/>
+	<Item Name="tcsOfc_salEvent_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_salEvent_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_salEvent_detailedState.vi" Type="VI" URL="../VIs/tcsOfc_salEvent_detailedState.vi"/>
 	<Item Name="tcsOfc_salEvent_errorCode.vi" Type="VI" URL="../VIs/tcsOfc_salEvent_errorCode.vi"/>
 	<Item Name="tcsOfc_salEvent_heartbeat.vi" Type="VI" URL="../VIs/tcsOfc_salEvent_heartbeat.vi"/>
@@ -183,15 +203,18 @@
 	<Item Name="tcsOfc_salProcessor_enable.vi" Type="VI" URL="../VIs/tcsOfc_salProcessor_enable.vi"/>
 	<Item Name="tcsOfc_salProcessor_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_salProcessor_enterControl.vi"/>
 	<Item Name="tcsOfc_salProcessor_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_salProcessor_exitControl.vi"/>
+	<Item Name="tcsOfc_salProcessor_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_salProcessor_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_salProcessor_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_salProcessor_readWfsFile.vi"/>
 	<Item Name="tcsOfc_salProcessor_standby.vi" Type="VI" URL="../VIs/tcsOfc_salProcessor_standby.vi"/>
 	<Item Name="tcsOfc_salProcessor_start.vi" Type="VI" URL="../VIs/tcsOfc_salProcessor_start.vi"/>
-	<Item Name="tcsOfc_salTelemetrySub_degreeOfFreedom.vi" Type="VI" URL="../VIs/tcsOfc_salTelemetrySub_degreeOfFreedom.vi"/>
 	<Item Name="tcsOfc_salTelemetrySub_loopTimeMs.vi" Type="VI" URL="../VIs/tcsOfc_salTelemetrySub_loopTimeMs.vi"/>
 	<Item Name="tcsOfc_salTelemetrySub_timestamp.vi" Type="VI" URL="../VIs/tcsOfc_salTelemetrySub_timestamp.vi"/>
 	<Item Name="tcsOfc_waitForCompletion_disable.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_disable.vi"/>
 	<Item Name="tcsOfc_waitForCompletion_enable.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_enable.vi"/>
 	<Item Name="tcsOfc_waitForCompletion_enterControl.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_enterControl.vi"/>
 	<Item Name="tcsOfc_waitForCompletion_exitControl.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_exitControl.vi"/>
+	<Item Name="tcsOfc_waitForCompletion_readShwfsFile.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_readShwfsFile.vi"/>
+	<Item Name="tcsOfc_waitForCompletion_readWfsFile.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_readWfsFile.vi"/>
 	<Item Name="tcsOfc_waitForCompletion_standby.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_standby.vi"/>
 	<Item Name="tcsOfc_waitForCompletion_start.vi" Type="VI" URL="../VIs/tcsOfc_waitForCompletion_start.vi"/>
 	<Item Name="tcsOfcshminitFlags.vi" Type="VI" URL="../VIs/tcsOfcshminitFlags.vi"/>
